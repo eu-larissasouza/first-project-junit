@@ -34,6 +34,7 @@ public class CalculadoraTest {
 		resultadoReal = calc.somar(3, 2);
 
 		double resultadoEsperado = 5;
+		// mascara delta = 0 - significa que ele compara um valor exato
 		assertEquals(resultadoEsperado, resultadoReal, 0);
 	}
 	
@@ -67,4 +68,12 @@ public class CalculadoraTest {
 		assertEquals(resultadoEsperado, resultadoReal, 0);
 	}
 
+	@Test
+	public void testDivisao6por65() {
+		nomeTeste = "Divisao 6 por 65";
+		resultadoReal = calc.dividir(65, 6);
+
+		double resultadoEsperado = 0.092307692;
+		assertEquals(resultadoEsperado, resultadoReal, 0);
+	}
 }
